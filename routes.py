@@ -25,17 +25,40 @@ container_client = get_blob_container_client(BLOB_CONNECTION_STRING, BLOB_CONTAI
 @bp.route('/admin/register', methods=['POST'])
 def register_admin():
     data = request.json
+    full_name = data.get("full_name")
     email = data.get("email")
     password = data.get("password")
+    retype_password = data.get("retype_password")
+    phone_number = data.get("phone_number")
+    terms_accepted = data.get("terms_accepted")
 
-    if not email or not password:
-        return jsonify({"message": "Email and password required"}), 400
+    # Validate required fields
+    if not all([full_name, email, password, retype_password, phone_number, terms_accepted]):
+        return jsonify({"message": "All fields are required"}), 400
 
+    # Check if passwords match
+    if password != retype_password:
+        return jsonify({"message": "Passwords do not match"}), 400
+
+    # Check if terms and conditions are accepted
+    if not terms_accepted:
+        return jsonify({"message": "You must accept the terms and conditions"}), 400
+
+    # Check if email already exists
     if admin_collection.find_one({"email": email}):
         return jsonify({"message": "Admin already exists"}), 400
 
+    # Hash the password
     hashed_password = generate_password_hash(password)
-    admin_collection.insert_one({"email": email, "password": hashed_password})
+
+    # Insert the admin into the database
+    admin_collection.insert_one({
+        "full_name": full_name,
+        "email": email,
+        "password": hashed_password,
+        "phone_number": phone_number,
+        "created_at": datetime.utcnow()
+    })
 
     return jsonify({"message": "Admin registered successfully"}), 201
 
