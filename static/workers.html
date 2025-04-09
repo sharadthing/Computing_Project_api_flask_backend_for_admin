@@ -58,28 +58,28 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
- <!-- Mobile Sidebar Overlay -->
- <div id="mobileSidebar" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden transition-opacity duration-300">
-  <div class="bg-white w-64 h-full p-6 shadow-lg transform transition-transform duration-300">
-    <button onclick="toggleSidebar()" class="text-right block mb-6 text-emerald-600 hover:text-emerald-800 font-bold transition-colors">✕ Close</button>
-    <div class="flex flex-col items-center">
-      <div class="relative">
-        <img src="https://img.icons8.com/ios-filled/100/user-male-circle.png" alt="Profile" class="w-20 h-20 rounded-full mb-4 border-4 border-emerald-100" />
-        <div class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
+  <!-- Mobile Sidebar Overlay -->
+  <div id="mobileSidebar" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden transition-opacity duration-300">
+    <div class="bg-white w-64 h-full p-6 shadow-lg transform transition-transform duration-300">
+      <button onclick="toggleSidebar()" class="text-right block mb-6 text-emerald-600 hover:text-emerald-800 font-bold transition-colors">✕ Close</button>
+      <div class="flex flex-col items-center">
+        <div class="relative">
+          <img src="https://img.icons8.com/ios-filled/100/user-male-circle.png" alt="Profile" class="w-20 h-20 rounded-full mb-4 border-4 border-emerald-100" />
+          <div class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
+        </div>
+        <h2 class="text-xl font-bold text-emerald-800">Sharad Thing</h2>
+        <p class="text-sm text-emerald-600">Admin Panel</p>
       </div>
-      <h2 class="text-xl font-bold text-emerald-800">Admin Name</h2>
-      <p class="text-sm text-emerald-600">Admin Panel</p>
-    </div>
-    <div class="mt-8 space-y-2">
-      <a href="dashboard.html" class="block py-2 px-4 sidebar-link active text-emerald-700">Dashboard</a>
-      <a href="workers.html" class="block py-2 px-4 sidebar-link text-emerald-700">Manage Workers</a>
-      <a href="Records.html" class="block py-2 px-4 sidebar-link text-emerald-700">Records</a>
-      <a href="Reports.html" class="block py-2 px-4 sidebar-link text-emerald-700">Reports</a>
-      <a href="Live-feed.html" class="block py-2 px-4 sidebar-link text-emerald-700">Live-feed</a>
-      <a href="#" class="block py-2 px-4 sidebar-link text-emerald-700">Settings</a>
+      <div class="mt-8 space-y-2">
+        <a href="https://site-guardian-api-h7dahee9e3cbc4bc.uksouth-01.azurewebsites.net" class="block py-2 px-4 sidebar-link active text-emerald-700">Dashboard</a>
+        <a href="../static/workers.html" class="block py-2 px-4 sidebar-link text-emerald-700">Manage Workers</a>
+        <a href="../static/Records.html" class="block py-2 px-4 sidebar-link text-emerald-700">Records</a>
+        <a href="../static/Reports.html" class="block py-2 px-4 sidebar-link text-emerald-700">Reports</a>
+        <a href="../static/live-feed.html" class="block py-2 px-4 sidebar-link text-emerald-700">Live-feed</a>
+        <a href="../static/setting.html" class="block py-2 px-4 sidebar-link text-emerald-700">Settings</a>
+      </div>
     </div>
   </div>
-</div>
 
   <div class="flex flex-col md:flex-row h-screen overflow-y-auto">
     <!-- Sidebar (Desktop) -->
@@ -93,27 +93,27 @@
         <p class="text-sm text-emerald-600">Admin Panel</p>
       </div>
       <div class="mt-8 space-y-2">
-        <a href="dashboard.html" class="block py-2 px-4 sidebar-link active text-emerald-700">
+        <a href="https://site-guardian-api-h7dahee9e3cbc4bc.uksouth-01.azurewebsites.net" class="block py-2 px-4 sidebar-link active text-emerald-700">
           <i class="fas fa-tachometer-alt mr-3"></i> Dashboard
         </a>
-        <a href="workers.html" class="block py-2 px-4 sidebar-link text-emerald-700">
+        <a href="../static/workers.html" class="block py-2 px-4 sidebar-link text-emerald-700">
           <i class="fas fa-users mr-3"></i> Manage Workers
         </a>
-        <a href="Records.html" class="block py-2 px-4 sidebar-link text-emerald-700">
+        <a href="../static/Records.html" class="block py-2 px-4 sidebar-link text-emerald-700">
           <i class="fas fa-hard-hat mr-3"></i> Records
         </a>
-        <a href="Reports.html" class="block py-2 px-4 sidebar-link text-emerald-700">
+        <a href="../static/Reports.html" class="block py-2 px-4 sidebar-link text-emerald-700">
           <i class="fas fa-chart-bar mr-3"></i> Reports
 
-          <a href="Live-feed.html" class="block py-2 px-4 sidebar-link text-emerald-700">
+          <a href="../static/live-feed.html" class="block py-2 px-4 sidebar-link text-emerald-700">
             <i class="fas fa-chart-bar mr-3"></i> Live-feed
         </a>
-        <a href="setting.html" class="block py-2 px-4 sidebar-link text-emerald-700">
+        <a href="../static/setting.html" class="block py-2 px-4 sidebar-link text-emerald-700">
           <i class="fas fa-cog mr-3"></i> Settings
         </a>
       </div>
       <div class="mt-auto pt-6">
-        <a href="dashboard.html" class="block py-2 px-4 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors">
+        <a href="https://site-guardian-api-h7dahee9e3cbc4bc.uksouth-01.azurewebsites.net" class="block py-2 px-4 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors">
           <i class="fas fa-sign-out-alt mr-3"></i> Logout
         </a>
       </div>
