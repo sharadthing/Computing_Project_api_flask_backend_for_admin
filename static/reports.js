@@ -1,4 +1,4 @@
-// Initialize charts when DOM is loaded
+// Initializes charts when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Set default dates (last 7 days)
     const endDate = new Date();
